@@ -1,0 +1,653 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="qrichtext" content="1" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'Consolas'; font-size:10pt; font-weight:400; font-style:normal;">
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:21:59) [MSC v.1900 32 bit (Intel)]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Type &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">IPython 6.2.1 -- An enhanced Interactive Python.</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">1</span><span style=" color:#000080;">]:</span> import pandas as pd</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> datasets = pd.read_csv('vgsalesGlobale.csv')</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> print(datasets)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> datasets.isnull().any()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> datasets = datasets.fillna(0.00)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> datasets.isnull().any()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">        Rank                                               Name Platform  \</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">0          1                                         Wii Sports      Wii   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1          2                                  Super Mario Bros.      NES   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2          3                                     Mario Kart Wii      Wii   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">3          4                                  Wii Sports Resort      Wii   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">4          5                           Pokemon Red/Pokemon Blue       GB   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">5          6                                             Tetris       GB   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">6          7                              New Super Mario Bros.       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">7          8                                           Wii Play      Wii   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">8          9                          New Super Mario Bros. Wii      Wii   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">9         10                                          Duck Hunt      NES   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">10        11                                         Nintendogs       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">11        12                                      Mario Kart DS       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">12        13                        Pokemon Gold/Pokemon Silver       GB   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">13        14                                            Wii Fit      Wii   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">14        15                                       Wii Fit Plus      Wii   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">15        16                                 Kinect Adventures!     X360   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16        17                                 Grand Theft Auto V      PS3   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">17        18                      Grand Theft Auto: San Andreas      PS2   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">18        19                                  Super Mario World     SNES   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">19        20       Brain Age: Train Your Brain in Minutes a Day       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">20        21                      Pokemon Diamond/Pokemon Pearl       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">21        22                                   Super Mario Land       GB   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">22        23                                Super Mario Bros. 3      NES   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">23        24                                 Grand Theft Auto V     X360   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">24        25                        Grand Theft Auto: Vice City      PS2   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">25        26                      Pokemon Ruby/Pokemon Sapphire      GBA   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">26        27                        Pokemon Black/Pokemon White       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">27        28        Brain Age 2: More Training in Minutes a Day       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">28        29                             Gran Turismo 3: A-Spec      PS2   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">29        30                     Call of Duty: Modern Warfare 3     X360   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">...      ...                                                ...      ...   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16568  16571                                        XI Coliseum      PSP   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16569  16572                                 Resident Evil 4 HD     XOne   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16570  16573                      Farming 2017 - The Simulation      PS4   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16571  16574         Grisaia no Kajitsu: La Fruit de la Grisaia      PSP   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16572  16575                   Scarlett: Nichijou no Kyoukaisen      PS2   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16573  16576                                Mini Desktop Racing      Wii   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16574  16577  Yattaman Wii: BikkuriDokkiri Machine de Mou Ra...      Wii   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16575  16578                              Neo Angelique Special      PSP   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16576  16579                                  Rugby Challenge 3     XOne   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16577  16580                                          Damnation       PC   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16578  16581                      Outdoors Unleashed: Africa 3D      3DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16579  16582                                  PGA European Tour      N64   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16580  16583                                          Real Rode      PS2   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16581  16584                                          Fit &amp; Fun      Wii   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16582  16585                                    Planet Monsters      GBA   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16583  16586                                     Carmageddon 64      N64   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16584  16587                                   Bust-A-Move 3000       GC   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16585  16588                                             Breach       PC   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16586  16589                     Secret Files 2: Puritas Cordis       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16587  16590                           Mezase!! Tsuri Master DS       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16588  16591                                   Mega Brain Boost       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16589  16592  Chou Ezaru wa Akai Hana: Koi wa Tsuki ni Shiru...      PSV   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16590  16593  Eiyuu Densetsu: Sora no Kiseki Material Collec...      PSP   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16591  16594                                Myst IV: Revelation       PC   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16592  16595                                           Plushees       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16593  16596                 Woody Woodpecker in Crazy Castle 5      GBA   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16594  16597                      Men in Black II: Alien Escape       GC   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16595  16598   SCORE International Baja 1000: The Official Game      PS2   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16596  16599                                         Know How 2       DS   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16597  16600                                   Spirits &amp; Spells      GBA   </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">         Year         Genre                    Publisher  NA_Sales  EU_Sales  \</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">0      2006.0        Sports                     Nintendo     41.49     29.02   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1      1985.0      Platform                     Nintendo     29.08      3.58   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2      2008.0        Racing                     Nintendo     15.85     12.88   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">3      2009.0        Sports                     Nintendo     15.75     11.01   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">4      1996.0  Role-Playing                     Nintendo     11.27      8.89   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">5      1989.0        Puzzle                     Nintendo     23.20      2.26   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">6      2006.0      Platform                     Nintendo     11.38      9.23   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">7      2006.0          Misc                     Nintendo     14.03      9.20   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">8      2009.0      Platform                     Nintendo     14.59      7.06   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">9      1984.0       Shooter                     Nintendo     26.93      0.63   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">10     2005.0    Simulation                     Nintendo      9.07     11.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">11     2005.0        Racing                     Nintendo      9.81      7.57   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">12     1999.0  Role-Playing                     Nintendo      9.00      6.18   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">13     2007.0        Sports                     Nintendo      8.94      8.03   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">14     2009.0        Sports                     Nintendo      9.09      8.59   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">15     2010.0          Misc       Microsoft Game Studios     14.97      4.94   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16     2013.0        Action         Take-Two Interactive      7.01      9.27   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">17     2004.0        Action         Take-Two Interactive      9.43      0.40   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">18     1990.0      Platform                     Nintendo     12.78      3.75   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">19     2005.0          Misc                     Nintendo      4.75      9.26   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">20     2006.0  Role-Playing                     Nintendo      6.42      4.52   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">21     1989.0      Platform                     Nintendo     10.83      2.71   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">22     1988.0      Platform                     Nintendo      9.54      3.44   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">23     2013.0        Action         Take-Two Interactive      9.63      5.31   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">24     2002.0        Action         Take-Two Interactive      8.41      5.49   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">25     2002.0  Role-Playing                     Nintendo      6.06      3.90   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">26     2010.0  Role-Playing                     Nintendo      5.57      3.28   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">27     2005.0        Puzzle                     Nintendo      3.44      5.36   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">28     2001.0        Racing  Sony Computer Entertainment      6.85      5.09   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">29     2011.0       Shooter                   Activision      9.03      4.28   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">...       ...           ...                          ...       ...       ...   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16568  2006.0        Puzzle  Sony Computer Entertainment      0.00      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16569  2016.0       Shooter                       Capcom      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16570  2016.0    Simulation            UIG Entertainment      0.00      0.01   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16571  2013.0     Adventure                    Prototype      0.00      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16572  2008.0     Adventure              Kadokawa Shoten      0.00      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16573  2007.0        Racing               Popcorn Arcade      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16574  2008.0        Racing                  Takara Tomy      0.00      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16575  2008.0     Adventure                   Tecmo Koei      0.00      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16576  2016.0        Sports         Alternative Software      0.00      0.01   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16577  2009.0       Shooter                  Codemasters      0.00      0.01   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16578  2011.0        Sports                      Mastiff      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16579  2000.0        Sports                   Infogrames      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16580  2008.0     Adventure              Kadokawa Shoten      0.00      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16581  2011.0        Sports                      Unknown      0.00      0.01   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16582  2001.0        Action                        Titus      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16583  1999.0        Action           Virgin Interactive      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16584  2003.0        Puzzle                      Ubisoft      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16585  2011.0       Shooter                    Destineer      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16586  2009.0     Adventure                  Deep Silver      0.00      0.01   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16587  2009.0        Sports                  Hudson Soft      0.00      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16588  2008.0        Puzzle        Majesco Entertainment      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16589  2016.0        Action              dramatic create      0.00      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16590  2007.0  Role-Playing           Falcom Corporation      0.00      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16591  2004.0     Adventure                      Ubisoft      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16592  2008.0    Simulation                    Destineer      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16593  2002.0      Platform                        Kemco      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16594  2003.0       Shooter                   Infogrames      0.01      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16595  2008.0        Racing                   Activision      0.00      0.00   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16596  2010.0        Puzzle                     7G//AMES      0.00      0.01   </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16597  2003.0      Platform                      Wanadoo      0.01      0.00   </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">       JP_Sales  Other_Sales  Global_Sales  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">0          3.77         8.46         82.74  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">1          6.81         0.77         40.24  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">2          3.79         3.31         35.82  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">3          3.28         2.96         33.00  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">4         10.22         1.00         31.37  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">5          4.22         0.58         30.26  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">6          6.50         2.90         30.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">7          2.93         2.85         29.02  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">8          4.70         2.26         28.62  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">9          0.28         0.47         28.31  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">10         1.93         2.75         24.76  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">11         4.13         1.92         23.42  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">12         7.20         0.71         23.10  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">13         3.60         2.15         22.72  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">14         2.53         1.79         22.00  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">15         0.24         1.67         21.82  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16         0.97         4.14         21.40  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">17         0.41        10.57         20.81  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">18         3.54         0.55         20.61  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">19         4.16         2.05         20.22  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">20         6.04         1.37         18.36  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">21         4.18         0.42         18.14  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">22         3.84         0.46         17.28  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">23         0.06         1.38         16.38  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">24         0.47         1.78         16.15  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">25         5.38         0.50         15.85  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">26         5.65         0.82         15.32  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">27         5.32         1.18         15.30  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">28         1.87         1.16         14.98  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">29         0.13         1.32         14.76  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">...         ...          ...           ...  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16568      0.01         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16569      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16570      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16571      0.01         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16572      0.01         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16573      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16574      0.01         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16575      0.01         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16576      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16577      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16578      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16579      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16580      0.01         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16581      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16582      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16583      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16584      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16585      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16586      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16587      0.01         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16588      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16589      0.01         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16590      0.01         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16591      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16592      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16593      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16594      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16595      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16596      0.00         0.00          0.01  </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">16597      0.00         0.00          0.01  </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">[16598 rows x 11 columns]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">1</span><span style=" color:#8b0000;">]:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Rank            False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Name            False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Platform        False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Year            False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Genre           False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Publisher       False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">NA_Sales        False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">EU_Sales        False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">JP_Sales        False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Other_Sales     False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Global_Sales    False</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">dtype: bool</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">2</span><span style=" color:#000080;">]:</span> datasets.columns</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> datasets = datasets[['Rank', 'Year', 'NA_Sales',</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span>        'EU_Sales', 'JP_Sales', 'Other_Sales', 'Global_Sales']]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> x =datasets[[ 'Year', 'NA_Sales',</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span>        'EU_Sales', 'JP_Sales', 'Other_Sales']]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> y = datasets[['Rank','Global_Sales']]</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> from sklearn import model_selection</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> train_data,test_data,train_target,test_target = model_selection.train_test_split(x,y)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> from sklearn import linear_model</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> regression = linear_model.LinearRegression()</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> fitting = regression.fit(train_data,train_target)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> result = regression.predict(test_data)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">3</span><span style=" color:#000080;">]:</span> from sklearn import metrics</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> varience = metrics.r2_score(results,test_target)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> mean_error  = metrics.mean_squared_error(results,test_target)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Traceback <span style=" color:#4682b4;">(most recent call last)</span>:</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#4682b4;">  File </span><span style=" color:#006400;">&quot;&lt;ipython-input-3-5e6703694cc4&gt;&quot;</span><span style=" color:#4682b4;">, line </span><span style=" color:#006400;">3</span><span style=" color:#4682b4;">, in </span><span style=" color:#9400d3;">&lt;module&gt;</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">    varience = metrics.r2_score(results,test_target)</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">NameError:</span> name 'results' is not defined</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">4</span><span style=" color:#000080;">]:</span> </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">4</span><span style=" color:#000080;">]:</span> varience = metrics.r2_score(result,test_target)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">   ...:</span> mean_error  = metrics.mean_squared_error(result,test_target)</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">5</span><span style=" color:#000080;">]:</span> pyplot.scatter(result,test_target)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Traceback <span style=" color:#4682b4;">(most recent call last)</span>:</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#4682b4;">  File </span><span style=" color:#006400;">&quot;&lt;ipython-input-5-0ec905ff4fa4&gt;&quot;</span><span style=" color:#4682b4;">, line </span><span style=" color:#006400;">1</span><span style=" color:#4682b4;">, in </span><span style=" color:#9400d3;">&lt;module&gt;</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">    pyplot.scatter(result,test_target)</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">NameError:</span> name 'pyplot' is not defined</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">6</span><span style=" color:#000080;">]:</span> </p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">6</span><span style=" color:#000080;">]:</span> from matplotlib import pyplot</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">7</span><span style=" color:#000080;">]:</span> pyplot.scatter(result,test_target)</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#8b0000;">Out[</span><span style=" font-weight:600; color:#8b0000;">7</span><span style=" color:#8b0000;">]:</span> &lt;matplotlib.collections.PathCollection at 0xe78c30&gt;</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><img src="data:image/png;base64,
+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
+jDHG7r33Xvb1r39d5Z/oiQ0bNrDR0VHGGGNf//rXc2PevHkzW7x4MRsaGmLb
+t29nzc3NLJ1Os3Q6zZqbm9m2bdvY8PAwW7x4Mdu8eTNjjLHLLruMPfHEE4wx
+xm688Ub2ox/9iDHG2IMPPpi73k888QS7/PLLVf+Zrvnggw/Yli1b2KpVq9jb
+b7+dO17s10UEu2sxnnjllVfYu+++yxYsWJA7ZjUHyJxn7CANRRETJkzIve7v
+74emaQCAX/7yl7juuuugaRpOO+00HD58GJ2dndiwYQPWrl2LyZMno7a2FmvX
+rsX69evR2dmJ3t5enH766dA0Dddddx2effbZXFvXX389AOD666/PHY8y5557
+bm7r59NOOw27d+8GkP1brrzySpSVlaGpqQmtra1466238NZbb6G1tRXNzc0o
+LS3FlVdeiV/+8pdgjOHf/u3fcOmllwIo/Pvzr8ull16Kl19+WWy1FSLz5s1D
+e3u76XixXxcRrK7FeOOss87C5MmTC45ZzQEy5xk7SKAo5K677sLMmTPx85//
+HPfccw8AYM+ePZg5c2bunMbGRuzZs8f2eGNjo+k4AHR1daGhoQEA0NDQgP37
+96v4s6TxyCOP4IILLgDg/rp0d3dj0qRJOeGUf13yv5NKpTBx4kR0d3er+rOk
+QtfFGatrUQxYzQEy5xk7SKBIZM2aNVi4cKHp39jq6Hvf+x527dqFq6++Gj/8
+4Q8B8DcX0zTN9fEo43RdgOy1SaVSuPrqqwHIvS5RvWYi18VIMVwXv4zXv8sP
+quYZ5Ts2jmdeeuklofOuuuoqXHTRRfjOd76DxsZG7Nq1K/fZ7t27ccIJJ6Cx
+sRG//e1vC46fffbZaGxszJmF8s8HgPr6enR2dqKhoQGdnZ2oq6uT84f5xOm6
+PProo/jVr36Fl19+OXfTWl0XANzjU6dOxeHDh5FOp5FKpQrOH2ursbER6XQa
+R44cMZkKwkD0fsmnGK6LX+yu0XjHag6QOc/YQRqKIrZu3Zp7/dxzz2Hu3LkA
+gHXr1uGxxx4DYwxvvvkmJk6ciIaGBpx33nl48cUXcejQIRw6dAgvvvgizjvv
+PDQ0NKCmpgZvvvkmGGN47LHHcPHFF+faGovSePTRR3PHo8z69etx//3347nn
+nkNlZWXu+Lp16/Dkk09ieHgYO3bswNatW3Hqqadi+fLl2Lp1K3bs2IGRkRE8
++eSTWLduHTRNwznnnIOnn34aQOHfn39dnn76aaxevTq2K1a6Ls5YXYtiwGoO
+kDnP2OI5xIBwxRe+8AW2YMECtmjRIva5z32O7d69mzHGmK7r7Oabb2bNzc1s
+4cKFBRE9Dz/8MGtpaWEtLS3skUceyR1/++232YIFC1hzczO75ZZbmK7rjDHG
+Dh48yFavXs1aW1vZ6tWrWXd3t9o/0gMtLS2ssbGRLVmyhC1ZsiQXdcQYY9/9
+7ndZc3MzmzNnTkGEyfPPP8/a2tpYc3Mz++53v5s7vm3bNrZ8+XLW0tLCLr30
+UjY0NMQYY2xwcJBdeumlrKWlhS1fvpxt27ZN3R/okWeeeYbNmDGDlZaWsrq6
+OnbuuefmPivm6yKK1bUYT1x55ZVs+vTpLJVKsRkzZrCf/OQnlnOAzHnGDsqU
+JwiCIKRAJi+CIAhCCiRzh71yAAAAOElEQVRQCIIgCCmQQCEIgiCkQAKFIAiC
+kAIJFIIgCEIKJFAIgiAIKZBAIQiCIKRAAoUgCIKQwv8HuB671X/97LcAAAAA
+SUVORK5CYII=
+" /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" color:#000080;">In [</span><span style=" font-weight:600; color:#000080;">8</span><span style=" color:#000080;">]:</span> </p></body></html>
